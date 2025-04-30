@@ -148,10 +148,10 @@ If any app is excluded from the policy, in order to not inadvertently block user
 
 Most apps have a similar dependency, which is why these low privilege scopes are automatically excluded whenever there's an app exclusion in an **All resources** policy. These low privilege scope exclusions don't allow data access beyond basic user profile and group information. The excluded scopes are listed as follows, consent is still required for apps to use these permissions.
 
-- Native clients and Single page applications (SPAs) have access to the following low privilege scopes:  
+- Native clients and Single page applications (SPAs) **have** access to the following low privilege scopes:  
    - Azure AD Graph: `email`, `offline_access`, `openid`, `profile`, `User.Read`
    - Microsoft Graph: `email`, `offline_access`, `openid`, `profile`, `User.Read`, `People.Read`
-- Confidential clients have access to the following low privilege scopes, if they're excluded from an **All resources** policy:         
+- Confidential clients **do not have** access to the following low privilege scopes, unless they're excluded from an **All resources** policy:         
    - Azure AD Graph: `email`, `offline_access`, `openid`, `profile`, `User.Read`, `User.Read.All`,`User.ReadBasic.All`
    - Microsoft Graph: `email`, `offline_access`, `openid`, `profile`, `User.Read`, `User.Read.All`, `User.ReadBasic.All`, `People.Read`, `People.Read.All`, `GroupMember.Read.All`, `Member.Read.Hidden`
 
